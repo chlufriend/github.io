@@ -1,113 +1,72 @@
-<!DOCTYPE html>
-<html lang="zh">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>新世纪中文学校 | New Century Chinese School | École chinoise du nouveau siècle</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.5/cdn.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
+    <title>Nouvelle École du Siècle</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-gray-50" x-data="{
-    currentLang: 'zh',
-    menuOpen: false,
-    translations: {
-        'nav_home': {
-            'zh': '首页',
-            'en': 'Home',
-            'fr': 'Accueil'
-        },
-        'nav_summer': {
-            'zh': '夏令营',
-            'en': 'Summer Camp',
-            'fr': 'Camp d\'été'
-        },
-        'nav_courses': {
-            'zh': '课程设置',
-            'en': 'Courses',
-            'fr': 'Cours'
-        },
-        'nav_register': {
-            'zh': '在线报名',
-            'en': 'Registration',
-            'fr': 'Inscription'
-        },
-        'welcome_title': {
-            'zh': '欢迎来到新世纪中文学校',
-            'en': 'Welcome to New Century Chinese School',
-            'fr': 'Bienvenue à l\'École chinoise du nouveau siècle'
-        },
-        'welcome_text': {
-            'zh': '我们致力于为学生提供优质的中文教育和丰富的文化体验。',
-            'en': 'We are committed to providing quality Chinese education and rich cultural experiences.',
-            'fr': 'Nous nous engageons à fournir une éducation chinoise de qualité et des expériences culturelles enrichissantes.'
-        }
-    }
-}">
-    <!-- 导航栏 -->
-    <nav class="bg-white shadow-lg">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex items-center">
-                    <div class="text-xl font-bold text-blue-600">
-                        新世纪中文学校
-                    </div>
-                </div>
-
-                <!-- 语言切换 -->
-                <div class="flex items-center space-x-4">
-                    <button @click="currentLang = 'zh'" :class="{'font-bold': currentLang === 'zh'}" class="text-sm">中文</button>
-                    <button @click="currentLang = 'en'" :class="{'font-bold': currentLang === 'en'}" class="text-sm">English</button>
-                    <button @click="currentLang = 'fr'" :class="{'font-bold': currentLang === 'fr'}" class="text-sm">Français</button>
-                </div>
-
-                <!-- 导航链接 -->
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#" class="text-gray-600 hover:text-blue-600" x-text="translations.nav_home[currentLang]"></a>
-                    <a href="#" class="text-gray-600 hover:text-blue-600" x-text="translations.nav_summer[currentLang]"></a>
-                    <a href="#" class="text-gray-600 hover:text-blue-600" x-text="translations.nav_courses[currentLang]"></a>
-                    <a href="#" class="text-gray-600 hover:text-blue-600" x-text="translations.nav_register[currentLang]"></a>
-                </div>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#mission">Mission</a></li>
+                <li><a href="#activites">Activités</a></li>
+                <li><a href="#horaire">Horaire</a></li>
+                <li><a href="#photos">Photos</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="language-options">
+                <a href="?lang=fr">Français</a> | <a href="?lang=zh">中文</a> | <a href="?lang=en">English</a>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-    <!-- 主要内容 -->
-    <main class="max-w-6xl mx-auto px-4 py-8">
-        <!-- 欢迎区域 -->
-        <div class="text-center mb-12">
-            <h1 class="text-4xl font-bold text-gray-800 mb-4" x-text="translations.welcome_title[currentLang]"></h1>
-            <p class="text-gray-600" x-text="translations.welcome_text[currentLang]"></p>
-        </div>
+    <main>
+        <section id="accueil">
+            <h1>Bienvenue à la Nouvelle École du Siècle</h1>
+            <p>Une école dédiée à la promotion de l'apprentissage du chinois, de la culture et des compétences internationales.</p>
+        </section>
 
-        <!-- 特色课程展示 -->
-        <div class="grid md:grid-cols-3 gap-8">
-            <!-- 夏令营 -->
-            <div class="bg-white rounded-lg shadow-md p-6">
-                <img src="/api/placeholder/400/300" alt="Summer Camp" class="w-full h-48 object-cover rounded-lg mb-4">
-                <h3 class="text-xl font-semibold mb-2" x-text="translations.nav_summer[currentLang]"></h3>
+        <section id="mission">
+            <h2>Notre Mission</h2>
+            <p>Favoriser l'excellence académique, promouvoir la culture chinoise et offrir un environnement inclusif et enrichissant pour tous les étudiants.</p>
+        </section>
+
+        <section id="activites">
+            <h2>Activités</h2>
+            <ul>
+                <li>Cours de langue chinoise pour tous les niveaux</li>
+                <li>Ateliers culturels : calligraphie, musique traditionnelle</li>
+                <li>Événements spéciaux : fêtes culturelles, journées portes ouvertes</li>
+            </ul>
+        </section>
+
+        <section id="horaire">
+            <h2>Horaire</h2>
+            <p>Les cours ont lieu les samedis de 9h à 12h. Consultez notre <a href="#contact">page contact</a> pour plus de détails.</p>
+        </section>
+
+        <section id="photos">
+            <h2>Photos</h2>
+            <p>Explorez nos moments précieux en images !</p>
+            <div class="photo-gallery">
+                <img src="photo1.jpg" alt="Photo 1">
+                <img src="photo2.jpg" alt="Photo 2">
+                <img src="photo3.jpg" alt="Photo 3">
             </div>
+        </section>
 
-            <!-- 课程设置 -->
-            <div class="bg-white rounded-lg shadow-md p-6">
-                <img src="/api/placeholder/400/300" alt="Courses" class="w-full h-48 object-cover rounded-lg mb-4">
-                <h3 class="text-xl font-semibold mb-2" x-text="translations.nav_courses[currentLang]"></h3>
-            </div>
-
-            <!-- 在线报名 -->
-            <div class="bg-white rounded-lg shadow-md p-6">
-                <img src="/api/placeholder/400/300" alt="Registration" class="w-full h-48 object-cover rounded-lg mb-4">
-                <h3 class="text-xl font-semibold mb-2" x-text="translations.nav_register[currentLang]"></h3>
-            </div>
-        </div>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Adresse : 1234 Rue de l'École, Montréal, QC</p>
+            <p>Téléphone : +1 (514) 123-4567</p>
+            <p>Email : contact@nouvelleecole.ca</p>
+        </section>
     </main>
 
-    <!-- 页脚 -->
-    <footer class="bg-gray-800 text-white mt-12">
-        <div class="max-w-6xl mx-auto px-4 py-8">
-            <div class="text-center">
-                <p>© 2024 新世纪中文学校</p>
-            </div>
-        </div>
+    <footer>
+        <p>&copy; 2025 Nouvelle École du Siècle. Tous droits réservés.</p>
     </footer>
 </body>
 </html>
